@@ -1,5 +1,17 @@
 # AWS Compute for Dummies
 
+- [AWS Compute for Dummies](#aws-compute-for-dummies)
+- [ECS](#ecs)
+  - [Cluster](#cluster)
+  - [Task definition](#task-definition)
+  - [Task](#task)
+  - [Service](#service)
+    - [Deployment type](#deployment-type)
+      - [Rolling update](#rolling-update)
+      - [Blue/Green deployment](#bluegreen-deployment)
+      - [External deployment](#external-deployment)
+    - [Load Balancing](#load-balancing)
+  - [Quotas](#quotas)
 # ECS
 
 //source: [What is Amazon Elastic Container Service?](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)

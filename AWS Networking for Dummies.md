@@ -2,6 +2,7 @@
 
 # Table of contents
 
+- [AWS Networking for Dummies](#aws-networking-for-dummies)
 - [Table of contents](#table-of-contents)
 - [VPC](#vpc)
   - [Regions e zone](#regions-e-zone)
@@ -51,6 +52,10 @@
   - [Architetture](#architetture)
 - [CloudFront](#cloudfront)
   - [Casi d'uso](#casi-duso)
+- [Elastic Load Balancing](#elastic-load-balancing)
+  - [Listener](#listener)
+  - [Target Group](#target-group)
+  - [Comparison](#comparison)
 
 # VPC
 
