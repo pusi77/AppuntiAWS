@@ -5,6 +5,7 @@
   - [DB instance](#db-instance)
     - [Limiti](#limiti)
   - [DB instance class](#db-instance-class)
+- [DynamoDB](#dynamodb)
 # RDS
 
 //source: [What is Amazon Relational Database Service (Amazon RDS)?](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
@@ -53,3 +54,12 @@ Sono presenti tre tipi di instance class:
 - **memory optimized - "x/z/r"**: ottimizzate per worload sbilanciati sull'utilizzo della memoria.
 
 - **burstable performance - "t"**: utilizzano un sistema di crediti che consente di utilizzare l'intera CPU per brevi finestre temporali.
+
+
+# DynamoDB
+
+//source: [What is Amazon DynamoDB?](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
+
+DynamoDB è un database NoSQL gestito da AWS pensato per offrire prestazioni alte e costanti con un'ottima scalabilità. DynamoDB offre anche encryption at rest, backup on-demand e la possibilità, tramite il point-in-time recovery, di fare il restore di una table in un punto temporale negli ultimi 35 giorni. È inoltre possibile eliminare automaticamente elementi dalle tabelle alla scadenza di un TTL.
+
+I dati presenti nelle tabelle sono distribuiti su un numero di server sufficiente a rispettare i requisiti di storage e banda. I dati sono replicati automaticamente su più Availability Zones all'interno della Region, è possibile abilitare l'uso di global tabels per mantenere le table sincronizzate su più Regions.
