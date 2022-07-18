@@ -12,6 +12,11 @@
       - [External deployment](#external-deployment)
     - [Load Balancing](#load-balancing)
   - [Quotas](#quotas)
+- [EC2](#ec2)
+  - [VM Import/Export](#vm-importexport)
+    - [Compatibilità](#compatibilità)
+    - [Licenze](#licenze)
+    - [Costi](#costi)
 # ECS
 
 //source: [What is Amazon Elastic Container Service?](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
@@ -116,3 +121,41 @@ Gli Application Load Balancer in particolare offrono alcune caratteristiche inte
 | Dimensione task definition    | 64KiB   | No         |            |
 | Container per task definition | 10      | No         |            |
 | Target groups per service     | 10      | No         |            |
+
+
+ # EC2
+
+ ## VM Import/Export
+
+ // sources: [VM Import/Export](https://aws.amazon.com/ec2/vm-import/), [Importing a VM as an image using VM Import/Export](https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html)
+
+ Servizio che permette di importare ed esportare VM tra AWS e un altro ambiente (e.g. on-premises).
+ La VM importata diventerà un'AMI.
+
+ Per effettuare l'import è necessario caricare l'immagine su S3, creare un ruolo `vmimport` con i permessi necessari e lanciare il comando da CLI.
+
+### Compatibilità
+
+//source: [VM Import/Export Requirements](https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#vmimport-image-formats)
+
+I formati compatibili sono:
+
+- **OVA**
+- **VMDK**
+- **VHD**
+- **RAW**
+
+### Licenze
+
+// source: [Licensing options](https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#licensing)
+
+Per quanto riguarda l'import di macchine il cui sistema operativo preveda la necessità di una licenza ci sono 3 opzioni:
+- **Auto**: (default) AWS stabilisce automaticamente l'opzione corretta.
+- **AWS**: AWS sostituisce la licenza sulla macchina con una appropriata.
+- **BYOL**: viene mantenuta la licenz della macchina virtuale.
+
+ ### Costi
+
+ // source: [VM Import/Export](https://aws.amazon.com/ec2/vm-import/)
+
+ Non sono previsti costi aggiuntivi, ma solo i costi classici di EC2 e S3.
